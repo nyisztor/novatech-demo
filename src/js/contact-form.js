@@ -123,3 +123,4 @@ if (document.readyState === 'loading') {
 } else {
   initContactForm();
 }
+// Contact form improvements in progress
