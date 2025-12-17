@@ -1,0 +1,123 @@
+/**
+ * Home Page Styles
+ */
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--color-primary-600), var(--color-primary-800));
+  color: white;
+  padding: var(--spacing-20) 0;
+}
+
+.hero__container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  text-align: center;
+}
+
+.hero__title {
+  font-size: var(--font-size-5xl);
+  color: white;
+  margin-bottom: var(--spacing-6);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero__subtitle {
+  font-size: var(--font-size-xl);
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto var(--spacing-8);
+  line-height: var(--line-height-relaxed);
+}
+
+.hero__actions {
+  display: flex;
+  gap: var(--spacing-4);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero__actions .btn--secondary {
+  color: white;
+  border-color: white;
+}
+
+.hero__actions .btn--secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Features Section */
+.features {
+  background: white;
+}
+
+.features__container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.features__title {
+  text-align: center;
+  margin-bottom: var(--spacing-12);
+}
+
+.features__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-8);
+}
+
+.feature-card {
+  text-align: center;
+  padding: var(--spacing-8);
+  border-radius: var(--radius-lg);
+  background: var(--color-secondary-50);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.feature-card__icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-4);
+}
+
+.feature-card__title {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-3);
+}
+
+.feature-card__description {
+  color: var(--color-secondary-600);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: var(--spacing-12) 0;
+  }
+
+  .hero__title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .hero__subtitle {
+    font-size: var(--font-size-lg);
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}

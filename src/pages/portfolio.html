@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NovaTech Solutions portfolio - See our successful client projects">
+  <title>Portfolio | NovaTech Solutions</title>
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages/portfolio.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <header class="header">
+    <div class="header__container">
+      <a href="index.html" class="header__logo">
+        <span class="header__logo-text">NovaTech</span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu">
+          <span class="nav__toggle-icon"></span>
+          <span class="visually-hidden">Toggle menu</span>
+        </button>
+        <ul class="nav__menu" id="nav-menu">
+          <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="services.html" class="nav__link">Services</a></li>
+          <li class="nav__item"><a href="portfolio.html" class="nav__link nav__link--active" aria-current="page">Portfolio</a></li>
+          <li class="nav__item"><a href="team.html" class="nav__link">Team</a></li>
+          <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="page-hero__container">
+        <h1 class="page-hero__title">Our Portfolio</h1>
+        <p class="page-hero__subtitle">Selected projects showcasing our expertise</p>
+      </div>
+    </section>
+
+    <section class="portfolio" aria-labelledby="portfolio-heading">
+      <h2 id="portfolio-heading" class="visually-hidden">Project Gallery</h2>
+      <div class="portfolio__container">
+        <div class="portfolio__filters" role="group" aria-label="Filter projects by category">
+          <button class="filter-btn filter-btn--active" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" data-filter="web" aria-pressed="false">Web Apps</button>
+          <button class="filter-btn" data-filter="mobile" aria-pressed="false">Mobile</button>
+          <button class="filter-btn" data-filter="cloud" aria-pressed="false">Cloud</button>
+        </div>
+
+        <div class="portfolio__grid">
+          <article class="project-card" data-category="web">
+            <div class="project-card__image" style="background-color: var(--color-primary-100);">
+              <span class="project-card__placeholder">FinTrack</span>
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">FinTrack Dashboard</h3>
+              <p class="project-card__category">Web Application</p>
+              <p class="project-card__description">Real-time financial analytics dashboard for a Fortune 500 investment firm.</p>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="mobile">
+            <div class="project-card__image" style="background-color: var(--color-secondary-100);">
+              <span class="project-card__placeholder">HealthHub</span>
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">HealthHub Mobile</h3>
+              <p class="project-card__category">Mobile App</p>
+              <p class="project-card__description">Patient engagement app connecting healthcare providers with patients.</p>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="cloud">
+            <div class="project-card__image" style="background-color: var(--color-accent-100);">
+              <span class="project-card__placeholder">LogiFlow</span>
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">LogiFlow Platform</h3>
+              <p class="project-card__category">Cloud Infrastructure</p>
+              <p class="project-card__description">Scalable logistics platform handling 1M+ daily shipments.</p>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="web">
+            <div class="project-card__image" style="background-color: var(--color-success-100);">
+              <span class="project-card__placeholder">EduLearn</span>
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">EduLearn LMS</h3>
+              <p class="project-card__category">Web Application</p>
+              <p class="project-card__description">Learning management system serving 50,000+ students globally.</p>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="cloud">
+            <div class="project-card__image" style="background-color: var(--color-warning-100);">
+              <span class="project-card__placeholder">DataSync</span>
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">DataSync Migration</h3>
+              <p class="project-card__category">Cloud Infrastructure</p>
+              <p class="project-card__description">Enterprise data migration from on-premise to multi-cloud architecture.</p>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="mobile">
+            <div class="project-card__image" style="background-color: var(--color-primary-100);">
+              <span class="project-card__placeholder">RetailGo</span>
+            </div>
+            <div class="project-card__content">
+              <h3 class="project-card__title">RetailGo POS</h3>
+              <p class="project-card__category">Mobile App</p>
+              <p class="project-card__description">Mobile point-of-sale system for retail chain with 200+ locations.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" aria-labelledby="cta-title">
+      <div class="cta__container">
+        <h2 id="cta-title" class="cta__title">Want to See Your Project Here?</h2>
+        <p class="cta__description">Let's build something great together.</p>
+        <a href="contact.html" class="btn btn--primary btn--large">Start a Project</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__brand">
+        <span class="footer__logo">NovaTech</span>
+        <p class="footer__tagline">Technology consulting for modern businesses</p>
+      </div>
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <ul class="footer__links">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <p class="footer__copyright">&copy; 2024 NovaTech Solutions. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="../js/navigation.js"></script>
+  <script type="module" src="../js/portfolio-filters.js"></script>
+</body>
+</html>

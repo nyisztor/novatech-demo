@@ -1,0 +1,89 @@
+/**
+ * Contact Page Styles
+ */
+
+.contact__container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--spacing-12);
+  align-items: start;
+}
+
+/* Contact Info */
+.contact__info {
+  padding: var(--spacing-8);
+  background: var(--color-secondary-50);
+  border-radius: var(--radius-lg);
+}
+
+.contact__info-title {
+  margin-bottom: var(--spacing-4);
+}
+
+.contact__info-text {
+  color: var(--color-secondary-600);
+  margin-bottom: var(--spacing-8);
+}
+
+.contact__details {
+  font-style: normal;
+}
+
+.contact__detail {
+  margin-bottom: var(--spacing-6);
+}
+
+.contact__detail:last-child {
+  margin-bottom: 0;
+}
+
+.contact__detail-label {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-secondary-500);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--spacing-1);
+}
+
+.contact__detail a {
+  color: var(--color-secondary-800);
+}
+
+.contact__detail a:hover {
+  color: var(--color-primary-600);
+}
+
+/* Contact Form */
+.contact-form {
+  background: white;
+  padding: var(--spacing-8);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+@media (max-width: 900px) {
+  .contact__container {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-8);
+  }
+
+  .contact__info {
+    order: 2;
+  }
+
+  .contact-form {
+    order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact__info,
+  .contact-form {
+    padding: var(--spacing-6);
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "mcpServers": {
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}"
+      }
+    },
+    "figma": {
+      "type": "http",
+      "url": "https://figma.com/mcp",
+      "headers": {
+        "X-Figma-Token": "${FIGMA_ACCESS_TOKEN}"
+      }
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "./src",
+        "./docs",
+        "./tests"
+      ]
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"[$(date -u +%Y-%m-%dT%H:%M:%SZ)] Bash: $TOOL_INPUT\" >> .claude/logs/commands.log",
+            "timeout": 5
+          }
+        ]
+      },
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if echo \"$TOOL_INPUT\" | grep -qE '\\.env|\\.key|secrets/'; then echo 'Blocked: Cannot modify sensitive files'; exit 2; fi",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "file_path=$(echo \"$TOOL_INPUT\" | grep -oE '\"file_path\"\\s*:\\s*\"[^\"]+\"' | cut -d'\"' -f4); if [[ \"$file_path\" =~ \\.(js|css|html)$ ]]; then npx prettier --write \"$file_path\" 2>/dev/null || true; fi",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"[$(date -u +%Y-%m-%dT%H:%M:%SZ)] $NOTIFICATION\" >> .claude/logs/notifications.log",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"[$(date -u +%Y-%m-%dT%H:%M:%SZ)] Session ended: $STOP_REASON\" >> .claude/logs/sessions.log",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

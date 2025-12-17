@@ -1,0 +1,115 @@
+/**
+ * Portfolio Page Styles
+ */
+
+.portfolio__container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* Filter Buttons */
+.portfolio__filters {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-10);
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: var(--spacing-2) var(--spacing-5);
+  border: 1px solid var(--color-secondary-300);
+  border-radius: var(--radius-full);
+  background: white;
+  color: var(--color-secondary-600);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-btn:hover {
+  border-color: var(--color-primary-500);
+  color: var(--color-primary-600);
+}
+
+.filter-btn--active {
+  background: var(--color-primary-600);
+  border-color: var(--color-primary-600);
+  color: white;
+}
+
+/* Portfolio Grid */
+.portfolio__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: var(--spacing-6);
+}
+
+/* Project Card */
+.project-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+.project-card.is-hidden {
+  display: none;
+}
+
+.project-card__image {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-card__placeholder {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-secondary-500);
+  opacity: 0.5;
+}
+
+.project-card__content {
+  padding: var(--spacing-6);
+}
+
+.project-card__title {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-1);
+}
+
+.project-card__category {
+  font-size: var(--font-size-sm);
+  color: var(--color-primary-600);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-3);
+}
+
+.project-card__description {
+  color: var(--color-secondary-600);
+  font-size: var(--font-size-sm);
+}
+
+@media (max-width: 768px) {
+  .portfolio__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio__filters {
+    gap: var(--spacing-2);
+  }
+
+  .filter-btn {
+    padding: var(--spacing-2) var(--spacing-4);
+    font-size: var(--font-size-sm);
+  }
+}

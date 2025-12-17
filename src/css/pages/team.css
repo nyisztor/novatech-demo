@@ -1,0 +1,109 @@
+/**
+ * Team Page Styles
+ */
+
+.team__container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.team__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-6);
+}
+
+/* Team Card */
+.team-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-8);
+  text-align: center;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.team-card__avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--color-primary-500), var(--color-primary-700));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-5);
+}
+
+.team-card__initials {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: white;
+}
+
+.team-card__name {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-1);
+}
+
+.team-card__role {
+  color: var(--color-primary-600);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-4);
+}
+
+.team-card__bio {
+  color: var(--color-secondary-600);
+  font-size: var(--font-size-sm);
+}
+
+/* Values Section */
+.values {
+  background: white;
+}
+
+.values__container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.values__title {
+  text-align: center;
+  margin-bottom: var(--spacing-10);
+}
+
+.values__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-8);
+}
+
+.value-item {
+  text-align: center;
+}
+
+.value-item__title {
+  font-size: var(--font-size-xl);
+  color: var(--color-primary-700);
+  margin-bottom: var(--spacing-3);
+}
+
+.value-item__description {
+  color: var(--color-secondary-600);
+}
+
+@media (max-width: 768px) {
+  .team__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-card {
+    padding: var(--spacing-6);
+  }
+}

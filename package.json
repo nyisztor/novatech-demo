@@ -1,0 +1,30 @@
+{
+  "name": "novatech-demo",
+  "version": "1.0.0",
+  "description": "NovaTech Solutions - Demo project for Advanced Claude Code course",
+  "scripts": {
+    "dev": "npx serve src -l 3000",
+    "lint": "eslint src/js/",
+    "lint:fix": "eslint src/js/ --fix",
+    "format": "prettier --write \"src/**/*.{html,css,js}\"",
+    "format:check": "prettier --check \"src/**/*.{html,css,js}\"",
+    "test": "npm run test:unit && npm run test:e2e",
+    "test:unit": "node --test tests/unit/",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "eslint": "^8.56.0",
+    "prettier": "^3.2.0",
+    "serve": "^14.2.0"
+  },
+  "keywords": [
+    "demo",
+    "claude-code",
+    "pluralsight",
+    "course"
+  ],
+  "author": "Károly Nyisztor",
+  "license": "MIT"
+}

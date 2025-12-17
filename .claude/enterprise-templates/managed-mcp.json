@@ -1,0 +1,34 @@
+{
+  "$schema": "https://claude.ai/schemas/managed-mcp.json",
+  "version": "1.0",
+  "description": "NovaTech Enterprise MCP server policies",
+
+  "serverPolicies": {
+    "allowlist": [
+      "@modelcontextprotocol/server-github",
+      "@modelcontextprotocol/server-filesystem",
+      "@modelcontextprotocol/server-postgres",
+      "@notionhq/notion-mcp-server"
+    ],
+    "denylist": [
+      "*-unofficial-*",
+      "*-untrusted-*"
+    ]
+  },
+
+  "serverDefaults": {
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}"
+      }
+    }
+  },
+
+  "restrictions": {
+    "maxServers": 10,
+    "allowHttpTransport": true,
+    "requireEnvVarSecrets": true
+  }
+}
