@@ -6,7 +6,7 @@ Demo project for the **Advanced Claude Code** course on Pluralsight.
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/novatech-demo.git
+git clone https://github.com/nyisztor/novatech-demo.git
 cd novatech-demo
 
 # Install dependencies
