@@ -19,7 +19,7 @@ npm install
 For the Figma MCP integration modules, you can duplicate the NovaTech designs to your own Figma account:
 
 **Figma Design File:**  
-[https://www.figma.com/design/DU6F0HJvr7XmhGMrNervcs/NovaTech-Solutions?node-id=1-2](https://www.figma.com/design/UZ2t3sc5vi2cn9MXHkOfLY/NovaTech-Solutions?node-id=1-3&t=qQLCM0caT9uCMqJ0-1)
+[[https://www.figma.com/design/DU6F0HJvr7XmhGMrNervcs/NovaTech-Solutions?node-id=1-2](https://www.figma.com/design/UZ2t3sc5vi2cn9MXHkOfLY/NovaTech-Solutions?node-id=1-3&t=qQLCM0caT9uCMqJ0-1)](https://www.figma.com/design/UZ2t3sc5vi2cn9MXHkOfLY/NovaTech-Solutions?node-id=1-3&t=qQLCM0caT9uCMqJ0-1)
 
 **To use:**
 - Click the link (requires free Figma account)
