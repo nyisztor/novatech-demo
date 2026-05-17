@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sign in to your NovaTech Solutions account">
+  <title>Sign In | NovaTech Solutions</title>
+  <link rel="stylesheet" href="/css/variables.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/pages/login.css">
+</head>
+<body class="login-body">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="login-layout">
+    <aside class="login-brand" aria-hidden="true">
+      <div class="login-brand__content">
+        <a href="/pages/index.html" class="login-brand__logo">NovaTech</a>
+        <p class="login-brand__tagline">Technology consulting for modern businesses</p>
+        <ul class="login-brand__features" aria-hidden="true">
+          <li>Cloud-native solutions</li>
+          <li>Expert technology consulting</li>
+          <li>Data-driven strategies</li>
+        </ul>
+      </div>
+    </aside>
+
+    <main id="main-content" class="login-main">
+      <div class="login-card">
+        <div class="login-card__header">
+          <a href="/pages/index.html" class="login-card__logo" aria-label="NovaTech Solutions home">
+            NovaTech
+          </a>
+          <h1 class="login-card__title">Welcome back</h1>
+          <p class="login-card__subtitle">Sign in to your account to continue</p>
+        </div>
+
+        <form class="login-form" id="login-form" novalidate aria-label="Sign in form">
+          <div class="form-group">
+            <label for="email" class="form-label">
+              Email address <span class="required" aria-hidden="true">*</span>
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-input"
+              required
+              autocomplete="email"
+              aria-describedby="email-error"
+              aria-required="true"
+              placeholder="you@example.com"
+            >
+            <span class="form-error" id="email-error" role="alert" aria-live="polite"></span>
+          </div>
+
+          <div class="form-group">
+            <div class="login-form__password-label">
+              <label for="password" class="form-label">
+                Password <span class="required" aria-hidden="true">*</span>
+              </label>
+              <a href="#" class="login-form__forgot-link">Forgot password?</a>
+            </div>
+            <div class="login-form__password-wrapper">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="form-input login-form__password-input"
+                required
+                autocomplete="current-password"
+                aria-describedby="password-error"
+                aria-required="true"
+                placeholder="Enter your password"
+              >
+              <button
+                type="button"
+                class="login-form__toggle-password"
+                aria-label="Show password"
+                aria-pressed="false"
+              >
+                <svg class="login-form__eye-icon" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+              </button>
+            </div>
+            <span class="form-error" id="password-error" role="alert" aria-live="polite"></span>
+          </div>
+
+          <div class="login-form__remember">
+            <label class="login-form__checkbox-label">
+              <input
+                type="checkbox"
+                name="remember"
+                class="login-form__checkbox"
+                aria-label="Remember me for 30 days"
+              >
+              <span>Remember me for 30 days</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--full-width login-form__submit">
+            Sign in
+          </button>
+
+          <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+        </form>
+
+        <div class="login-card__footer">
+          <p>Don't have an account? <a href="/pages/contact.html">Contact us</a></p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="/js/login.js"></script>
+</body>
+</html>

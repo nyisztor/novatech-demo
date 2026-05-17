@@ -1,0 +1,8 @@
+{
+  "name": "NovaTech Login Page Generator",
+  "id": "novatech-login-generator",
+  "api": "1.0.0",
+  "main": "code.js",
+  "editorType": ["figma", "dev"],
+  "capabilities": ["inspect"]
+}
