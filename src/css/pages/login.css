@@ -1,0 +1,286 @@
+/**
+ * Login Page Styles
+ */
+
+/* ===================
+   Layout
+   =================== */
+.login-body {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.login-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+
+/* ===================
+   Brand Panel (left)
+   =================== */
+.login-brand {
+  background: linear-gradient(160deg, var(--color-primary-900) 0%, var(--color-primary-800) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-16) var(--spacing-12);
+}
+
+.login-brand__content {
+  max-width: 480px;
+}
+
+.login-brand__logo {
+  display: inline-block;
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: white;
+  text-decoration: none;
+  margin-bottom: var(--spacing-4);
+}
+
+.login-brand__tagline {
+  font-size: var(--font-size-lg);
+  color: var(--color-primary-200);
+  margin-bottom: var(--spacing-10);
+  line-height: var(--line-height-relaxed);
+}
+
+.login-brand__features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.login-brand__features li {
+  color: var(--color-primary-300);
+  font-size: var(--font-size-base);
+  padding-left: var(--spacing-6);
+  position: relative;
+}
+
+.login-brand__features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent-500);
+  font-weight: var(--font-weight-bold);
+}
+
+/* ===================
+   Main / Card
+   =================== */
+.login-main {
+  background: var(--color-secondary-50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-8) var(--spacing-6);
+}
+
+.login-card {
+  background: white;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  padding: var(--spacing-10) var(--spacing-10);
+  width: 100%;
+  max-width: 440px;
+}
+
+/* ===================
+   Card Header
+   =================== */
+.login-card__header {
+  margin-bottom: var(--spacing-8);
+}
+
+.login-card__logo {
+  display: inline-block;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-600);
+  text-decoration: none;
+  margin-bottom: var(--spacing-5);
+}
+
+.login-card__title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-secondary-900);
+  margin-bottom: var(--spacing-2);
+  line-height: var(--line-height-tight);
+}
+
+.login-card__subtitle {
+  color: var(--color-secondary-500);
+  font-size: var(--font-size-base);
+}
+
+/* ===================
+   Login Form
+   =================== */
+.login-form__password-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-2);
+}
+
+.login-form__password-label .form-label {
+  margin-bottom: 0;
+}
+
+.login-form__forgot-link {
+  font-size: var(--font-size-sm);
+  color: var(--color-primary-600);
+  font-weight: var(--font-weight-medium);
+}
+
+.login-form__forgot-link:hover {
+  color: var(--color-primary-700);
+}
+
+.login-form__password-wrapper {
+  position: relative;
+}
+
+.login-form__password-input {
+  padding-right: 3rem;
+}
+
+.login-form__toggle-password {
+  position: absolute;
+  right: var(--spacing-3);
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-secondary-400);
+  padding: var(--spacing-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--transition-fast);
+}
+
+.login-form__toggle-password:hover {
+  color: var(--color-secondary-600);
+}
+
+.login-form__toggle-password[aria-pressed="true"] {
+  color: var(--color-primary-600);
+}
+
+/* ===================
+   Remember Me
+   =================== */
+.login-form__remember {
+  margin-bottom: var(--spacing-6);
+}
+
+.login-form__checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  color: var(--color-secondary-600);
+  user-select: none;
+}
+
+.login-form__checkbox {
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--color-primary-600);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* ===================
+   Submit Button
+   =================== */
+.login-form__submit {
+  margin-bottom: var(--spacing-2);
+}
+
+.login-form__submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* ===================
+   Card Footer
+   =================== */
+.login-card__footer {
+  margin-top: var(--spacing-6);
+  text-align: center;
+  font-size: var(--font-size-sm);
+  color: var(--color-secondary-500);
+}
+
+.login-card__footer a {
+  color: var(--color-primary-600);
+  font-weight: var(--font-weight-medium);
+}
+
+.login-card__footer a:hover {
+  color: var(--color-primary-700);
+}
+
+/* ===================
+   Skip Link
+   =================== */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: var(--spacing-4);
+  background: var(--color-primary-600);
+  color: white;
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  z-index: var(--z-tooltip);
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: var(--spacing-4);
+}
+
+/* ===================
+   Responsive
+   =================== */
+@media (max-width: 768px) {
+  .login-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .login-brand {
+    display: none;
+  }
+
+  .login-main {
+    padding: var(--spacing-6) var(--spacing-4);
+    background: white;
+    align-items: flex-start;
+    padding-top: var(--spacing-12);
+  }
+
+  .login-card {
+    box-shadow: none;
+    padding: var(--spacing-6) var(--spacing-4);
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-card__title {
+    font-size: var(--font-size-2xl);
+  }
+}
