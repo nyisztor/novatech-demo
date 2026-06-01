@@ -81,11 +81,13 @@ export function validateField(field) {
   // Update UI
   if (isValid) {
     field.classList.remove(CLASSES.invalid);
+    field.setAttribute('aria-invalid', 'false');
     if (errorEl) {
       errorEl.textContent = '';
     }
   } else {
     field.classList.add(CLASSES.invalid);
+    field.setAttribute('aria-invalid', 'true');
     if (errorEl) {
       errorEl.textContent = message;
     }

@@ -1,5 +1,8 @@
 import { defineConfig } from '@playwright/test';
 
+const PORT = Number(process.env.PORT) || 3000;
+const baseURL = `http://localhost:${PORT}`;
+
 export default defineConfig({
   testDir: './tests/e2e',
   fullyParallel: true,
@@ -8,12 +11,12 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: 'html',
   use: {
-    baseURL: 'http://localhost:3000',
+    baseURL,
     trace: 'on-first-retry',
   },
   webServer: {
-    command: 'npm run dev',
-    url: 'http://localhost:3000',
+    command: `npx --no-install serve src -l ${PORT}`,
+    url: baseURL,
     reuseExistingServer: !process.env.CI,
   },
 });

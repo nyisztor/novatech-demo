@@ -249,7 +249,7 @@
 
 .page-hero__subtitle {
   font-size: var(--font-size-xl);
-  opacity: 0.9;
+  color: var(--color-primary-50);
 }
 
 /* ===================
@@ -322,7 +322,7 @@
   display: block;
   margin-top: var(--spacing-1);
   font-size: var(--font-size-sm);
-  color: var(--color-error-600);
+  color: var(--color-error-700);
   min-height: 1.25rem;
 }
 

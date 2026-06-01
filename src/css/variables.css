@@ -32,6 +32,11 @@
   --color-accent-500: #14b8a6;
   --color-accent-700: #0f766e;
 
+  /* Colors - Hero */
+  --color-hero-gradient-start: #010101;
+  --color-hero-gradient-end: var(--color-primary-800);
+  --color-hero-heading: #00e5ff;
+
   /* Colors - Semantic */
   --color-success-100: #dcfce7;
   --color-success-500: #22c55e;

@@ -4,7 +4,7 @@
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, var(--color-primary-600), var(--color-primary-800));
+  background: linear-gradient(135deg, var(--color-hero-gradient-start) 0%, var(--color-hero-gradient-end) 100%);
   color: white;
   padding: var(--spacing-20) 0;
 }
@@ -18,7 +18,7 @@
 
 .hero__title {
   font-size: var(--font-size-5xl);
-  color: white;
+  color: var(--color-hero-heading);
   margin-bottom: var(--spacing-6);
   max-width: 800px;
   margin-left: auto;
@@ -27,7 +27,7 @@
 
 .hero__subtitle {
   font-size: var(--font-size-xl);
-  opacity: 0.9;
+  color: var(--color-primary-50);
   max-width: 600px;
   margin: 0 auto var(--spacing-8);
   line-height: var(--line-height-relaxed);

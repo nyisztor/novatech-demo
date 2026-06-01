@@ -30,6 +30,9 @@ playwright-report/
 .env.local
 .env.*.local
 
+# MCP live config (may hold credentials) — commit only .mcp.example.json
+.mcp.json
+
 # Temporary
 tmp/
 temp/
