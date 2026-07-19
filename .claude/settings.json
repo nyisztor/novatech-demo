@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "echo \"[$(date -u +%Y-%m-%dT%H:%M:%SZ)] Bash: $TOOL_INPUT\" >> .claude/logs/commands.log",
+            "command": "cmd=$(jq -r '.tool_input.command // \"\"'); echo \"[$(date -u +%Y-%m-%dT%H:%M:%SZ)] Bash: $cmd\" >> .claude/logs/commands.log",
             "timeout": 5
           }
         ]
@@ -16,7 +16,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "if echo \"$TOOL_INPUT\" | grep -qE '\\.env|\\.key|secrets/'; then echo 'Blocked: Cannot modify sensitive files'; exit 2; fi",
+            "command": "file_path=$(jq -r '.tool_input.file_path // \"\"'); if echo \"$file_path\" | grep -qE '\\.env|\\.key|secrets/'; then echo 'Blocked: Cannot modify sensitive files'; exit 2; fi",
             "timeout": 5
           }
         ]
@@ -28,7 +28,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "file_path=$(echo \"$TOOL_INPUT\" | grep -oE '\"file_path\"\\s*:\\s*\"[^\"]+\"' | cut -d'\"' -f4); if [[ \"$file_path\" =~ \\.(js|css|html)$ ]]; then npx prettier --write \"$file_path\" 2>/dev/null || true; fi",
+            "command": "file_path=$(jq -r '.tool_response.filePath // .tool_input.file_path // \"\"'); case \"$file_path\" in *.js|*.css|*.html) npx prettier --write \"$file_path\" 2>/dev/null || true;; esac",
             "timeout": 30
           }
         ]
