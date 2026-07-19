@@ -4,7 +4,7 @@
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, var(--color-primary-600), var(--color-primary-800));
+  background: linear-gradient(135deg, var(--color-hero-gradient-start), var(--color-primary-800));
   color: white;
   padding: var(--spacing-20) 0;
 }
@@ -18,7 +18,7 @@
 
 .hero__title {
   font-size: var(--font-size-5xl);
-  color: white;
+  color: var(--color-hero-heading);
   margin-bottom: var(--spacing-6);
   max-width: 800px;
   margin-left: auto;
@@ -76,7 +76,9 @@
   padding: var(--spacing-8);
   border-radius: var(--radius-lg);
   background: var(--color-secondary-50);
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base);
 }
 
 .feature-card:hover {
@@ -103,8 +105,8 @@
     padding: var(--spacing-12) 0;
     position: relative;
     z-index: 10;
-    margin-top: -60px;    /* BUG: pulls hero up behind the header */
-    padding-top: calc(var(--spacing-12) + 60px);  /* compensate visually */
+    margin-top: -60px; /* BUG: pulls hero up behind the header */
+    padding-top: calc(var(--spacing-12) + 60px); /* compensate visually */
   }
 
   .hero__title {
